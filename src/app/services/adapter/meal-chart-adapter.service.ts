@@ -27,6 +27,10 @@ export class MealChartAdapterService {
   }
 
   filterFavoredMeals(selectedCharacters: ICharacter[]): IMeal[] {
+    if (selectedCharacters.length === 0) {
+      return [];
+    }
+
     const firstCharacter = selectedCharacters[0];
 
     if (selectedCharacters.length === 1) {

@@ -1,0 +1,18 @@
+$selected-background: #e0f3ff !default;
+$selected-border: #1267ce !default;
+
+.black-eagles__header,
+.blue-lions__header,
+.golden-deer__header,
+.church-of-seiros__header,
+.ashen-wolves__header,
+.meals__header {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.selected-character__button {
+  border: 0.1rem solid $selected-border;
+  border-radius: 0.3rem;
+  background-color: $selected-background;
+}

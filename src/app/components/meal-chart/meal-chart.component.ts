@@ -19,7 +19,6 @@ export class MealChartComponent implements OnInit {
   readonly churchOfSeirosRoster = this.mealChartActionService.getChurchOfSeirosRoster();
   readonly ashenWolvesRoster = this.mealChartActionService.getAshenWolvesRoster();
   readonly selectedCharacters = this.mealChartActionService.getSelectedCharacters();
-
   readonly favoredMeals = this.mealChartActionService.getFavoredMeals();
 
   constructor(
@@ -27,7 +26,6 @@ export class MealChartComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.mealChartActionService.initializeMeals();
     this.mealChartActionService.initializeHouseRosters();
   }
 

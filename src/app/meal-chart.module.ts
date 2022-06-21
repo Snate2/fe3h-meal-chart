@@ -11,6 +11,7 @@ import { SelectedCharacterPipe } from './pipes/selected-character/selected-chara
 // Services
 import { MealChartActionService } from './services/action/meal-chart-action.service';
 import { MealChartAdapterService } from './services/adapter/meal-chart-adapter.service';
+import { MealChartLogicService } from './services/logic/meal-chart-logic.service';
 import { MealChartRosterInitializerService } from './services/roster-initializer/meal-chart-roster-initializer.service';
 import { MealChartStateService } from './services/state/meal-chart-state.service';
 
@@ -25,6 +26,7 @@ import { MealChartStateService } from './services/state/meal-chart-state.service
   providers: [
     MealChartActionService,
     MealChartAdapterService,
+    MealChartLogicService,
     MealChartRosterInitializerService,
     MealChartStateService,
   ],

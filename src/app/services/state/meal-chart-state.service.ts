@@ -24,7 +24,7 @@ export class MealChartStateService {
   }
 
   setBlackEaglesRoster(roster: ICharacter[]) {
-    this.blackEaglesRoster.next(roster);
+    this.blackEaglesRoster.next([...roster]);
   }
 
   getBlueLionsRoster(): Observable<ICharacter[]> {
@@ -32,7 +32,7 @@ export class MealChartStateService {
   }
 
   setBlueLionsRoster(roster: ICharacter[]) {
-    this.blueLionsRoster.next(roster);
+    this.blueLionsRoster.next([...roster]);
   }
 
   getGoldenDeerRoster(): Observable<ICharacter[]> {
@@ -48,7 +48,7 @@ export class MealChartStateService {
   }
 
   setChurchOfSeirosRoster(roster: ICharacter[]) {
-    this.churchOfSeirosRoster.next(roster);
+    this.churchOfSeirosRoster.next([...roster]);
   }
 
   getAshenWolvesRoster(): Observable<ICharacter[]> {
@@ -56,7 +56,7 @@ export class MealChartStateService {
   }
 
   setAshenWolvesRoster(roster: ICharacter[]) {
-    this.ashenWolvesRoster.next(roster);
+    this.ashenWolvesRoster.next([...roster]);
   }
 
   getSelectedCharacters(): Observable<ICharacter[]> {
@@ -64,7 +64,7 @@ export class MealChartStateService {
   }
 
   setSelectedCharacters(roster: ICharacter[]) {
-    this.selectedCharacters.next(roster);
+    this.selectedCharacters.next([...roster]);
   }
 
   getMeals(): Observable<IMeal[]> {
@@ -72,14 +72,14 @@ export class MealChartStateService {
   }
 
   setMeals(meals: IMeal[]) {
-    this.meals.next(meals);
+    this.meals.next([...meals]);
   }
 
   getFavoredMeals(): Observable<IMeal[]> {
     return this.favoredMeals.asObservable();
   }
 
-  setFavoredMeals(FavoredMeals: IMeal[]) {
-    this.favoredMeals.next(FavoredMeals);
+  setFavoredMeals(favoredMeals: IMeal[]) {
+    this.favoredMeals.next([...favoredMeals]);
   }
 }

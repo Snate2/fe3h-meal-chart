@@ -9,7 +9,6 @@ import { Observable } from 'rxjs';
 
 // Services
 import { MealChartAdapterService } from '../adapter/meal-chart-adapter.service';
-import { MealChartMealInitializerService } from '../meal-initializer/meal-chart-meal-initializer.service';
 import { MealChartRosterInitializerService } from '../roster-initializer/meal-chart-roster-initializer.service';
 import { MealChartStateService } from '../state/meal-chart-state.service';
 
@@ -17,14 +16,9 @@ import { MealChartStateService } from '../state/meal-chart-state.service';
 export class MealChartActionService {
   constructor(
     private readonly mealChartAdapterService: MealChartAdapterService,
-    private readonly mealChartMealInitializerService: MealChartMealInitializerService,
     private readonly mealChartRosterInitializerService: MealChartRosterInitializerService,
     private readonly mealChartStateService: MealChartStateService,
   ) {}
-
-  initializeMeals() {
-    this.mealChartMealInitializerService.initializeMeals();
-  }
 
   initializeHouseRosters() {
     this.mealChartRosterInitializerService.initializeHouseRosters();

@@ -1,8 +1,12 @@
 // Angular
 import { Injectable } from '@angular/core';
 
+// Constants
+import { Meals } from '../../constants/meals.constant';
+
 // Enums
 import { GarregMachHouses } from '../../enums/garreg-mach-houses.enum';
+import { Menu } from '../../enums/menu.enum';
 
 // Interfaces
 import { ICharacter } from '../../interfaces/meal-chart.interface';
@@ -29,42 +33,136 @@ export class MealChartRosterInitializerService {
       {
         name: 'Edelgard',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.SaghertAndCream],
+          Meals[Menu.FishAndBeanSoup],
+          Meals[Menu.VegetablePastaSalad],
+          Meals[Menu.OnionGratinSoup],
+          Meals[Menu.SweetBunTrio],
+          Meals[Menu.FishSandwich],
+          Meals[Menu.PeachSorbet],
+          Meals[Menu.SauteedPheasantAndEggs],
+          Meals[Menu.VegetableStirFry],
+        ],
       },
       {
         name: 'Hubert',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.SauteedJerky],
+          Meals[Menu.SpicyFishAndTurnipStew],
+          Meals[Menu.SweetAndSaltyWhitefishSaute],
+          Meals[Menu.GarregMachMeatPie],
+          Meals[Menu.CheesyVeronaStew],
+          Meals[Menu.SuperSpicyFishDango],
+          Meals[Menu.PickledSeafoodAndVegetables],
+          Meals[Menu.TwoFishSaute],
+          Meals[Menu.SauteedPheasantAndEggs],
+          Meals[Menu.GautierCheeseGratin],
+          Meals[Menu.CabbageAndHerringStew],
+        ],
       },
       {
         name: 'Ferdinand',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.GrilledHerring],
+          Meals[Menu.SaghertAndCream],
+          Meals[Menu.VegetablePastaSalad],
+          Meals[Menu.OnionGratinSoup],
+          Meals[Menu.SweetBunTrio],
+          Meals[Menu.FruitAndHerringTart],
+          Meals[Menu.FishermansBounty],
+          Meals[Menu.PheasantRoastWithBerrySauce],
+          Meals[Menu.FishSandwich],
+          Meals[Menu.DaphnelStew],
+          Meals[Menu.SauteedPheasantAndEggs],
+          Meals[Menu.VegetableStirFry],
+          Meals[Menu.BourgeoisPike],
+        ],
       },
       {
         name: 'Linhardt',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.SaghertAndCream],
+          Meals[Menu.FishAndBeanSoup],
+          Meals[Menu.OnionGratinSoup],
+          Meals[Menu.SweetBunTrio],
+          Meals[Menu.GarregMachMeatPie],
+          Meals[Menu.PheasantRoastWithBerrySauce],
+          Meals[Menu.PeachSorbet],
+          Meals[Menu.DaphnelStew],
+          Meals[Menu.GautierCheeseGratin],
+        ],
       },
       {
         name: 'Caspar',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.BeastMeatTeppanyaki],
+          Meals[Menu.VegetablePastaSalad],
+          Meals[Menu.SauteedJerky],
+          Meals[Menu.SweetBunTrio],
+          Meals[Menu.GarregMachMeatPie],
+          Meals[Menu.PickledRabbitSkewers],
+          Meals[Menu.CountryStyleRedTurnipPlate],
+          Meals[Menu.DaphnelStew],
+          Meals[Menu.GronderMeatSkewers],
+          Meals[Menu.SauteedPheasantAndEggs],
+          Meals[Menu.VegetableStirFry],
+          Meals[Menu.DerdriuStyleFriedPheasant],
+        ],
       },
       {
         name: 'Bernadetta',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.SaghertAndCream],
+          Meals[Menu.VegetablePastaSalad],
+          Meals[Menu.SweetBunTrio],
+          Meals[Menu.FruitAndHerringTart],
+          Meals[Menu.CheesyVeronaStew],
+          Meals[Menu.CountryStyleRedTurnipPlate],
+          Meals[Menu.PeachSorbet],
+          Meals[Menu.TwoFishSaute],
+          Meals[Menu.VegetableStirFry],
+          Meals[Menu.BourgeoisPike],
+          Meals[Menu.DerdriuStyleFriedPheasant],
+        ],
       },
       {
         name: 'Dorothea',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.SaghertAndCream],
+          Meals[Menu.VegetablePastaSalad],
+          Meals[Menu.OnionGratinSoup],
+          Meals[Menu.GarregMachMeatPie],
+          Meals[Menu.PeachSorbet],
+          Meals[Menu.GautierCheeseGratin],
+          Meals[Menu.VegetableStirFry],
+        ],
       },
       {
         name: 'Petra',
         house: GarregMachHouses.BlackEagles,
-        favoriteMeals: [],
+        favoriteMeals: [
+          Meals[Menu.BeastMeatTeppanyaki],
+          Meals[Menu.GrilledHerring],
+          Meals[Menu.SauteedJerky],
+          Meals[Menu.SpicyFishAndTurnipStew],
+          Meals[Menu.FishermansBounty],
+          Meals[Menu.CheesyVeronaStew],
+          Meals[Menu.FishSandwich],
+          Meals[Menu.PickledRabbitSkewers],
+          Meals[Menu.CountryStyleRedTurnipPlate],
+          Meals[Menu.SuperSpicyFishDango],
+          Meals[Menu.PickledSeafoodAndVegetables],
+          Meals[Menu.DaphnelStew],
+          Meals[Menu.GronderMeatSkewers],
+          Meals[Menu.VegetableStirFry],
+        ],
       },
     ];
 
@@ -232,7 +330,14 @@ export class MealChartRosterInitializerService {
       {
         name: 'Hapi',
         house: GarregMachHouses.ChurchOfSeiros,
-        favoriteMeals: [],
+        favoriteMeals: [
+          {
+            name: 'Small Fish Skewers',
+            ingredients: [
+              '3 Airmid Gobies',
+            ],
+          },
+        ],
       },
     ];
 
