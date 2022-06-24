@@ -1,14 +1,81 @@
 $selected-background: #e0f3ff !default;
 $selected-border: #1267ce !default;
 
+button {
+  border-radius: 0.3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+  margin-top: 0rem;
+  margin-bottom: 0.5rem
+}
+
+.meal-chart__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 3rem;
+}
+
+.meals__scroll-wrapper {
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.meals__wrapper {
+  height: 100%;
+}
+
+.meals__header {
+  text-decoration: underline;
+}
+
+.meals__list {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 0.5rem;
+  padding: 0.5rem 0rem;
+}
+
+.meal-label {
+  font-weight: bold;
+  color: gold;
+}
+
+.rosters__wrapper {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: auto;
+  padding: 1rem;
+}
+
 .black-eagles__header,
 .blue-lions__header,
 .golden-deer__header,
 .church-of-seiros__header,
 .ashen-wolves__header,
 .meals__header {
-  margin-top: 1rem;
   font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.black-eagles__list,
+.blue-lions__list,
+.golden-deer__list,
+.church-of-seiros__list,
+.ashen-wolves__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.black-eagles__character-button,
+.blue-lions__character-button,
+.golden-deer__character-button,
+.church-of-seiros__character-button,
+.ashen-wolves__character-button {
+  min-width: 5rem;
+  min-height: 3rem;
 }
 
 .selected-character__button {
