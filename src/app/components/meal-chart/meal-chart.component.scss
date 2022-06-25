@@ -1,20 +1,18 @@
 $selected-background: #e0f3ff !default;
 $selected-border: #1267ce !default;
 
+$mobile-width: 500px;
+$desktop-width: 501px;
+
 button {
   border-radius: 0.3rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
 }
 
 ul {
   margin-top: 0rem;
-  margin-bottom: 0.5rem
-}
-
-.meal-chart__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  column-gap: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .meals__scroll-wrapper {
@@ -22,6 +20,7 @@ ul {
   padding: 1rem;
 }
 
+.rosters__wrapper,
 .meals__wrapper {
   height: 100%;
 }
@@ -40,13 +39,6 @@ ul {
 .meal-label {
   font-weight: bold;
   color: gold;
-}
-
-.rosters__wrapper {
-  display: grid;
-  gap: 0.5rem;
-  margin-bottom: auto;
-  padding: 1rem;
 }
 
 .black-eagles__header,
@@ -82,4 +74,53 @@ ul {
   border: 0.1rem solid $selected-border;
   border-radius: 0.3rem;
   background-color: $selected-background;
+}
+
+@media (min-width: $desktop-width) {
+  .meal-chart__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 3rem;
+    width: 100%;
+  }
+
+  .rosters__wrapper {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: auto;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .meal-chart__wrapper {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .rosters__scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .rosters__wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem 1rem 0rem 1rem;
+    flex: 1 1 auto;
+  }
+
+  .meals__scroll-wrapper {
+    padding: 0rem 1rem 1rem 1rem;
+  }
+
+  .black-eagles__wrapper,
+  .blue-lions__wrapper,
+  .golden-deer__wrapper,
+  .church-of-seiros__wrapper {
+    padding-right: 1rem;
+  }
 }

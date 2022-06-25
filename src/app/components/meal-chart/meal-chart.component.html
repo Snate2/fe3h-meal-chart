@@ -10,75 +10,87 @@
   } as mealChartEntity"
 >
 <div class="meal-chart__wrapper">
-  <div class="rosters__wrapper">
-    <div class="black-eagles__header">
-      Black Eagles
-    </div>
-    <div class="black-eagles__list">
-      <ng-container *ngFor="let character of mealChartEntity.blackEaglesRoster">
-        <button
-          class="black-eagles__character-button"
-          [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
-          (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
-          >{{ character.name }}
-        </button>
-      </ng-container>
-    </div>
+  <div class="rosters__scroll-wrapper">
+    <div class="rosters__wrapper">
+      <div class="black-eagles__wrapper">
+        <div class="black-eagles__header">
+          Black Eagles
+        </div>
+        <div class="black-eagles__list">
+          <ng-container *ngFor="let character of mealChartEntity.blackEaglesRoster">
+            <button
+              class="black-eagles__character-button"
+              [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
+              (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
+              >{{ character.name }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
 
-    <div class="blue-lions__header">
-      Blue Lions
-    </div>
-    <div class="blue-lions__list">
-      <ng-container *ngFor="let character of mealChartEntity.blueLionsRoster">
-        <button
-          class="blue-lions__character-button"
-          [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
-          (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
-          >{{ character.name }}
-        </button>
-      </ng-container>
-    </div>
+      <div class="blue-lions__wrapper">
+        <div class="blue-lions__header">
+          Blue Lions
+        </div>
+        <div class="blue-lions__list">
+          <ng-container *ngFor="let character of mealChartEntity.blueLionsRoster">
+            <button
+              class="blue-lions__character-button"
+              [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
+              (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
+              >{{ character.name }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
 
-    <div class="golden-deer__header">
-      Golden Deer
-    </div>
-    <div class="golden-deer__list">
-      <ng-container *ngFor="let character of mealChartEntity.goldenDeerRoster">
-        <button
-          class="golden-deer__character-button"
-          [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
-          (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
-          >{{ character.name }}
-        </button>
-      </ng-container>
-    </div>
+      <div class="golden-deer__wrapper">
+        <div class="golden-deer__header">
+          Golden Deer
+        </div>
+        <div class="golden-deer__list">
+          <ng-container *ngFor="let character of mealChartEntity.goldenDeerRoster">
+            <button
+              class="golden-deer__character-button"
+              [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
+              (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
+              >{{ character.name }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
 
-    <div class="church-of-seiros__header">
-      Church of Seiros
-    </div>
-    <div class="church-of-seiros__list">
-      <ng-container *ngFor="let character of mealChartEntity.churchOfSeirosRoster">
-        <button
-          class="church-of-seiros__character-button"
-          [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
-          (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
-          >{{ character.name }}
-        </button>
-      </ng-container>
-    </div>
+      <div class="church-of-seiros__wrapper">
+        <div class="church-of-seiros__header">
+          Church of Seiros
+        </div>
+        <div class="church-of-seiros__list">
+          <ng-container *ngFor="let character of mealChartEntity.churchOfSeirosRoster">
+            <button
+              class="church-of-seiros__character-button"
+              [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
+              (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
+              >{{ character.name }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
 
-    <div class="ashen-wolves__header">
-      Ashen Wolves
-    </div>
-    <div class="ashen-wolves__list">
-      <ng-container *ngFor="let character of mealChartEntity.ashenWolvesRoster">
-        <button
-          class="ashen-wolves__character-button"
-          [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
-          (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
-          >{{ character.name }}
-        </button>
-      </ng-container>
+      <div class="ashen-wolves__wrapper">
+        <div class="ashen-wolves__header">
+          Ashen Wolves
+        </div>
+        <div class="ashen-wolves__list">
+          <ng-container *ngFor="let character of mealChartEntity.ashenWolvesRoster">
+            <button
+              class="ashen-wolves__character-button"
+              [class.selected-character__button]="character | selectedCharacterPipe: mealChartEntity.selectedCharacters"
+              (click)="selectCharacter(mealChartEntity.selectedCharacters, character)"
+              >{{ character.name }}
+            </button>
+          </ng-container>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -88,16 +100,22 @@
         Meals
       </div>
       <div class="meals__list">
-        <ng-container *ngFor="let meal of mealChartEntity.favoredMeals">
-          <div class="meal-label">{{ meal.name }}</div>
-          <ul class="meal-ingredients">
-            <ng-container *ngFor="let ingredient of meal.ingredients">
-              <li>
-                {{ ingredient }}
-              </li>
-            </ng-container>
-          </ul>
+        <ng-container *ngIf="mealChartEntity.selectedCharacters && mealChartEntity.selectedCharacters.length > 0; else EmptyState">
+          <ng-container *ngFor="let meal of mealChartEntity.favoredMeals">
+            <div class="meal-label">{{ meal.name }}</div>
+            <ul class="meal-ingredients">
+              <ng-container *ngFor="let ingredient of meal.ingredients">
+                <li>
+                  {{ ingredient }}
+                </li>
+              </ng-container>
+            </ul>
+          </ng-container>
         </ng-container>
+
+        <ng-template #EmptyState>
+          Select your desired dining partners to generate a list of meals they would both enjoy!
+        </ng-template>
       </div>
     </div>
   </div>
